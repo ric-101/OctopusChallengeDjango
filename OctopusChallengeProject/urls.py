@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+import OctopusChallenge.views
+
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # url(r'^admin/', admin.site.urls),
+
+    url(r'^admin/', OctopusChallenge.views.admin),
+    url(r'^$', OctopusChallenge.views.home),
+
+    # AJAX
+    url(r'^scan_url/$', OctopusChallenge.views.scan_url),
 ]

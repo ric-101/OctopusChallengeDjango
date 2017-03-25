@@ -1,0 +1,25 @@
+{% extends '__base__.html' %}
+{% load i18n %}
+
+{% block TITLE %} Octopus Challenge: Admin {% endblock %}
+
+{% block BODY %}
+
+    <table>
+
+        <tr>
+            <th>{% trans "word" %}</th>
+            <th>{% trans "frequency "%}</th>
+        </tr>
+
+        {% for word in words %}
+        <tr>
+            <td>{{ word.word }}</td>
+            <td>{{ word.freq }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+{% endblock %}

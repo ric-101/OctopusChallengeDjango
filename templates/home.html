@@ -1,0 +1,25 @@
+{% extends '__base__.html' %}
+{% load i18n %}
+
+{% block TITLE %} Octopus Challenge: Home {% endblock %}
+
+{% block BODY %}
+
+    <input id='url_input' type="text" placeholder="{% trans "Please insert URL to scan" %}">
+    <button id='scan_button'> {% trans "Scan!" %}</button>
+
+    <div id="words_cloud" ></div>
+
+    <script>
+        $( document ).ready(function() {
+            var url_input = $('#url_input');
+            var scan_button = $('#scan_button');
+            var words_cloud = $('#words_cloud');
+
+            scan_button.click(function () {
+                onclick_scan(scan_button, url_input, new WordsCloud(words_cloud));
+            })
+
+        });
+    </script>
+{% endblock %}

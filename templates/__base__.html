@@ -1,0 +1,33 @@
+{% csrf_token %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {#  jQuery  #}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    {#  jQuery UI  #}
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    {#  jQCloud  - WordCloud  #}
+    <script src="{% static "resources/jQCloud-master/dist/jqcloud.js" %}"></script>
+    <link rel="stylesheet" href="{% static "resources/jQCloud-master/dist/jqcloud.css" %}">
+
+    {#  OctopusChallenge  #}
+    <script src="{% static "OctopusChallenge/js/_setup.js" %}"></script>
+    <script src="{% static "OctopusChallenge/js/OctopusChallenge.js" %}"></script>
+    <link rel="stylesheet" href="{% static "OctopusChallenge/css/OctopusChallenge.css" %}">
+
+    <title>{% block TITLE %} Main Template - Please override this title {% endblock %}</title>
+</head>
+
+<body>
+    {% block BODY %} {% endblock %}
+
+</body>
+
+</html>
