@@ -25,11 +25,7 @@ SECRET_KEY = '6h+%9o4o2tc8k8t@tj1$3(*lm^g2tu^ru%gk7%3+$x4r%2_l$('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'localhost',
-    'sheltered-bastion-75881.herokuapp.com',
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
