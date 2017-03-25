@@ -1,0 +1,1 @@
+web: gunicorn OctopusChallengeProject.wsgi --log-file -
