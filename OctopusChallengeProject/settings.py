@@ -131,6 +131,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MAX_WORD_LEN = 50   # strings loger than this cannot be a single word, ignored
 MAX_WORDS_PER_URL = 100
 CRYPTO = {
     'salt': 'j354rl',

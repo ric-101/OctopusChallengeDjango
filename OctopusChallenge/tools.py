@@ -100,11 +100,12 @@ class LanguageParser:
         def get_words_list(self, words_dict):
             words = []
             for word_dict in words_dict:
-                word = self.prepare_word_for_server(word_dict, words_dict[word_dict])
-                if word is None:
-                    print('Warning! invalid word')
-                else:
-                    words.append(word)
+                if len(word_dict) <= settings.MAX_WORD_LEN:
+                    word = self.prepare_word_for_server(word_dict, words_dict[word_dict])
+                    if word is None:
+                        print('Warning! invalid word')
+                    else:
+                        words.append(word)
 
             words.sort(key=lambda k: k['freq'], reverse=True)
             return words[:settings.MAX_WORDS_PER_URL]
