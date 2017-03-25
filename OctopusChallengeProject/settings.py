@@ -134,7 +134,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MAX_WORD_LEN = 50   # strings loger than this cannot be a single word, ignored
 MAX_WORDS_PER_URL = 100
