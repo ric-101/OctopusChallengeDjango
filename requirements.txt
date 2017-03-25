@@ -9,3 +9,6 @@ pycrypto==2.6.1
 pyparsing==2.2.0
 requests==2.13.0
 six==1.10.0
+dj-database-url==0.4.1
+gunicorn==19.6.0
+whitenoise==2.0.6
